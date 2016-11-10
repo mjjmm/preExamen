@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="g9A-SU-LqV">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Spinner-->
+        <scene sceneID="Tfe-00-cHj">
+            <objects>
+                <viewController id="lH4-kK-JU2" customClass="SpinnerViewController" customModule="Eva2_pre_examen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2hW-EJ-PzV"/>
+                        <viewControllerLayoutGuide type="bottom" id="FwQ-9j-pma"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zD5-eJ-oBK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Spinner" id="cVp-v1-8w4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="glQ-W7-hfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46" y="627"/>
+        </scene>
+        <!--Asignaturas-->
+        <scene sceneID="PqM-6i-ytw">
+            <objects>
+                <viewController id="6Ra-pp-p5f" customClass="AsignaturasViewController" customModule="Eva2_pre_examen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gRv-hT-KxS"/>
+                        <viewControllerLayoutGuide type="bottom" id="elW-j4-y7d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HTb-yR-jho">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zxb-tT-val">
+                                <rect key="frame" x="20" y="13" width="560" height="538"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="mvl-8e-8RI">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mvl-8e-8RI" id="LMj-3N-lNv">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6Ra-pp-p5f" id="vJb-CM-VDo"/>
+                                    <outlet property="delegate" destination="6Ra-pp-p5f" id="l1F-4f-Dyl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zxb-tT-val" firstAttribute="top" secondItem="HTb-yR-jho" secondAttribute="topMargin" id="UP4-t5-PE0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Asignaturas" id="w9e-KR-5Iv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTS-SH-tBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="495" y="-833"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yT4-rr-lXt">
+            <objects>
+                <tabBarController id="g9A-SU-LqV" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="p7W-un-f16">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6Ra-pp-p5f" kind="relationship" relationship="viewControllers" id="c6D-Gl-NoJ"/>
+                        <segue destination="lH4-kK-JU2" kind="relationship" relationship="viewControllers" id="wtU-9P-0df"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsl-Jr-OBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-247" y="-269"/>
+        </scene>
+    </scenes>
+</document>
